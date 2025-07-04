@@ -5,6 +5,18 @@ import (
 	"testing"
 )
 
+func TestMain(m *testing.M) {
+	// kode ini akan di jalankan sebelum semua test
+	fmt.Println(">> sebelum test dijalankan")
+
+	// Jalankan semua test
+	m.Run()
+
+	// kode ini akan dijalankan setelah semua test
+	fmt.Println(">> setelah test selesai")
+
+}
+
 func TestHelloWorldJohn(t *testing.T) {
 	result := HelloWorld("John")
 
