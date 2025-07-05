@@ -22,3 +22,23 @@ func TestDivide(t *testing.T) {
 	assert.Error(t, err)
 	assert.Equal(t, 0, result)
 }
+
+// meneraptkan table test
+func TestAddDua(t *testing.T) {
+	tests := []struct {
+		name     string
+		a, b     int
+		expected int
+	}{
+		{"positif case", 3, 2, 5},
+		{"nol case", 0, 0, 0},
+		{"negatif case", -2, -3, -5},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result := Add(tt.a, tt.b)
+			assert.Equal(t, tt.expected, result)
+		})
+	}
+}
