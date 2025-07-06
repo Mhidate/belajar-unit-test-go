@@ -58,3 +58,12 @@ func TestHelloWorldBen(t *testing.T) {
 	}
 	fmt.Println("TestHelloWorldBen Done")
 }
+
+// bechmark
+// go test -bench=. ,untuk menjalankannya dengan unit test
+// go test -bench=. -run=^$ ,untuk menjalankan tanpa unit test
+func BenchmarkHelloWorld(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HelloWorld("John")
+	}
+}
