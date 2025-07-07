@@ -27,5 +27,5 @@ Covered	Hijau	Baris kode ini sudah dijalankan waktu unit test dijalankan.
 */
 
 func HelloWorld(name string) string {
-	return "Hi " + name
+	return "Hello " + name
 }
