@@ -6,6 +6,7 @@ import (
 )
 
 // go test -v -run [nama tes],untuk menjalankan test yang di inginkan.
+//go test -list . ,untuk cek list test yang ada
 
 func TestMain(m *testing.M) {
 	// kode ini akan di jalankan sebelum semua test
